@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Century Gothic;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            max-height: 100vh;
+            background-image: url(image.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            float: right;
+            width: 700px;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 2px 20px rgba(190, 31, 31, 0.4);
+            background-color: rgb(136, 189, 243);
+        }
+        
+        .header h1 {
+            color: white;
+            padding: 15px;
+        }
+        
+        .body {
+            flex: 1;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 30px;
+        }
+        
+        .members-count {
+            position: absolute;
+            top: 23%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: red;
+        }
+        
+        .messages {
+            flex-shrink: 1;
+            overflow: auto;
+            overflow-y: auto;
+            direction: ltr;
+        }
+        
+        .message {
+            padding: 5px 0;
+            color: rgb(255, 255, 255);
+            flex-shrink: 0;
+        }
+        
+        .message .member {
+            display: inline-block;
+        }
+        
+        .member {
+            color: red;
+            padding-right: 10px;
+            position: relative;
+        }
+        
+        .messages {
+            color: rgb(0, 0, 0);
+            width: fit-content;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .footer form {
+            display: flex;
+        }
+        
+        .message-form .message-form__input {
+            flex: 1;
+            height: 40px;
+            border: none;
+            outline: none;
+            padding-left: 5px;
+            font-size: 16px;
+        }
+        
+        .btn {
+            width: 100px;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: dodgerblue;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: blue;
+            transition: .2s ease;
+        }
+    </style>
+    <link rel="shortcut icon" type="image" href="message.png">
+</head>
+
+<body>
+    <header>
+        <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+        <div class="container">
+            <div class="header">
+                <h1>WEB MESSAGING</h1>
+            </div>
+            <div class="body">
+                <div class="members-count">-</div>
+                <!-- <div class="members-list">-</div> -->
+                <br>
+                <div class="messages" style=" overflow-y:auto; height:400px; width:650px;"></div>
+            </div>
+            <div class="footer">
+                <form class="message-form" onsubmit="return false;">
+                    <input class="message-form__input" placeholder="Type a message.." type="text" />
+                    <input class="btn" value="Send" type="submit" />
+                </form>
+            </div>
+            <script src="pubchat.js"></script>
+    </header>
+    </div>
+</body>
+
+</html>
+
+<!-- <div class="members-count">-</div>
+            <div class="members-list">-</div>
+            <div class="messages"></div> -->
